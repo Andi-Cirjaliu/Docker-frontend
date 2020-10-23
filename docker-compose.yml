@@ -10,5 +10,15 @@ services:
           - /app/node_modules
           - .:/app
       stdin_open: true
-      # tty: true
+      tty: true
+    test:
+      build:
+        context: .
+        dockerfile: Dockerfile.dev
+      volumes:
+          - /app/node_modules
+          - .:/app
+      stdin_open: true
+      tty: true
+      command: ["npm", "run", "test"]
 
