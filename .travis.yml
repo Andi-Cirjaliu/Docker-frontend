@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build  -t andicirjaliu/td_react -f Dockerfile.dev .
+
+script:
+  - docker run andicirjaliu/td_react npm run test -- --coverage --watchAll=false
