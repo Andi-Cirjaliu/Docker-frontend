@@ -10,3 +10,13 @@ before_install:
 
 script:
   - docker run andicirjaliu/td_react npm run test -- --coverage --watchAll=false
+
+# deploy:
+#    provider: cloudfoundry
+#    username: andi.cirjaliu@ro.ibm.com
+#    password: supersecretpassword
+#    api: https://api.run.pivotal.io
+#    organization: 
+#    space: 
+  #  manifest: manifest-staging.yml       # (optional)  Defaults to manifest.yml.
+  #  app_name: My app name                # (optional)
